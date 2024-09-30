@@ -1,0 +1,7 @@
+{
+  "name": "nuevo3009",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
