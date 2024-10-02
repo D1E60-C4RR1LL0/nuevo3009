@@ -10,6 +10,10 @@ export class ApidatosService {
   constructor(private httpclient:HttpClient) { }
 
   getCategorias() {
-    return this.httpclient.get<Categorias>('www.themealdb.com/api/json/v1/1/categories.php');
+    return this.httpclient.get<Categorias>(`https://www.themealdb.com/api/json/v1/1/categories.php`);
+  }
+
+  getComidasxCategoria(tipo:string){
+    return this.httpclient.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=${tipo}');
   }
 }
